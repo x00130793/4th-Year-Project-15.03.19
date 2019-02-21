@@ -1,0 +1,39 @@
+﻿@model Nov4thYr_Project.Models.DisplayAppointments
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Patient Details</h2>
+
+
+    
+    @if (Model != null)
+    {
+        if (Model.patientInfo.Count > 0)
+        {
+            <table>
+                <tr>
+                    <th>Patients Name </th>
+                    <th>Gender </th>
+                    <th>Patients Phone Number </th>
+                    <th>Symptoms </th>
+                    <th>Doctor </th>
+                    <th>Date </th>
+                    <th>Time </th>
+                </tr>
+                @foreach (var item in Model.patientInfo)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.PatientName)</td>
+                    <td>@Html.DisplayFor(m => item.Gender)</td>
+                    <td>@Html.DisplayFor(m => item.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(m => item.Symptoms)</td>
+                    <td>@Html.DisplayFor(m => item.Doctor)</td>
+                    <td>@Html.DisplayFor(m => item.Date)</td>
+                    <td>@Html.DisplayFor(m => item.Time)</td>
+                </tr>
+                }
+            </table>
+        }
+    }

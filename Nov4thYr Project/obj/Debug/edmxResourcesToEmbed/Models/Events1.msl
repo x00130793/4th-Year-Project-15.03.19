@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Events1StoreContainer" CdmEntityContainer="myDataBaseAuthEntities1">
+    <EntitySetMapping Name="Event1">
+      <EntityTypeMapping TypeName="Events1.Event1">
+        <MappingFragment StoreEntitySet="Event1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="eventstart" ColumnName="eventstart" />
+          <ScalarProperty Name="eventend" ColumnName="eventend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

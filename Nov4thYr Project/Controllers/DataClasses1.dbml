@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="myDataBaseAuth" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-UHGCDBJ\ADRIANSSQLSERVER;Initial Catalog=myDataBaseAuth;Integrated Security=True" SettingsObjectName="Nov4thYr_Project.Properties.Settings" SettingsPropertyName="myDataBaseAuthConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Event1" Member="Event1s">
+    <Type Name="Event1">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="text" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="eventstart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="eventend" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
