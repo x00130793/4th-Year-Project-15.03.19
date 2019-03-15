@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Configuration;
+using Stripe;
 
 namespace Nov4thYr_Project
 {
@@ -20,6 +22,7 @@ namespace Nov4thYr_Project
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ApplicationDbContext context = new ApplicationDbContext();
             IdentityHelper.SeedIdentities(context);
+            
         }
     }
 }

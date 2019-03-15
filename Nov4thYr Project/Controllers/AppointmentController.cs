@@ -43,6 +43,12 @@ namespace Nov4thYr_Project.Controllers
             });
             ViewBag.Doctors = items2;
 
+            IEnumerable<SelectListItem> startTimes = e1.eventstart.ToString().Select(ts => new SelectListItem { Value = e1.eventstart.ToString(), Text = e1.eventstart.ToString() });
+            ViewBag.StartTime = startTimes;
+
+            IEnumerable<SelectListItem> finishTimes = e1.eventend.ToString().Select(ts => new SelectListItem { Value = e1.eventend.ToString(), Text = e1.eventend.ToString() });
+            ViewBag.FinishTime = finishTimes;
+
             Appointment2 appointmentModel = new Appointment2();
             return View(appointmentModel);
 
@@ -59,11 +65,11 @@ namespace Nov4thYr_Project.Controllers
             ModelState.Clear();
             ViewBag.SuccessMessage = "Booking Successful.";
 
-            var items = e1.text.ToList();
-            if (items != null)
-            {
-                ViewBag.data = items;
-            }
+            //var items = e1.text.ToList();
+            //if (items != null)
+            //{
+            //    ViewBag.data = items;
+            //}
 
             return View("AppointmentForm", new Appointment2());
         }

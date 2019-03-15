@@ -59,9 +59,10 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Doctor, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Doctor, new { htmlAttributes = new { @class = "form-control" } })
+            @*\@Html.EditorFor(model => model.Doctor, new { htmlAttributes = new { @class = "form-control" } })*@
 
-            @Html.DropDownList("Doctors", (IEnumerable<SelectListItem>)ViewBag.Doctors, "Select a Value")
+            @*@Html.DropDownList(model => model.Doctor, (IEnumerable<SelectListItem>)ViewBag.Doctors, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownListFor(model => model.Doctor, (IEnumerable<SelectListItem>)ViewBag.Doctors, new { htmlAttributes = new { @class = "form-control" } })
 
             @Html.ValidationMessageFor(model => model.Doctor, "", new { @class = "text-danger" })
         </div>
@@ -70,7 +71,8 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+            @*@Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.DropDownList("Start times", (IEnumerable<SelectListItem>)ViewBag.StartTime, "Select Start Time")
             @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
         </div>
     </div>

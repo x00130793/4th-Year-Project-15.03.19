@@ -13,6 +13,7 @@ namespace Nov4thYr_Project.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.UserName = User.Identity.Name;
             return View();
         }
 
