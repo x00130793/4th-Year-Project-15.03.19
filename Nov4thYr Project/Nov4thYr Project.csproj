@@ -238,6 +238,12 @@
     <Compile Include="Models\Appointment2.cs">
       <DependentUpon>AppointmentModel2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Appointment3.cs">
+      <DependentUpon>AppointmentModel3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment4.cs">
+      <DependentUpon>AppointmentModel4.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AppointmentModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -282,6 +288,36 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppointmentModel2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DisplayAppointments.cs" />
     <Compile Include="Models\Event1.cs">
@@ -375,6 +411,26 @@
       <DependentUpon>AppointmentModel2.edmx</DependentUpon>
       <LastGenOutput>AppointmentModel2.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\AppointmentModel3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel3.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel4.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel4.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel4.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Events1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Events1.edmx</DependentUpon>
@@ -426,6 +482,20 @@
     </EntityDeploy>
     <Content Include="Models\Events1.edmx.diagram">
       <DependentUpon>Events1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AppointmentModel3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppointmentModel3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppointmentModel3.edmx.diagram">
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AppointmentModel4.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppointmentModel4.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppointmentModel4.edmx.diagram">
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">

@@ -7,6 +7,7 @@ using Nov4thYr_Project.Models;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using Microsoft.AspNet.Identity;
 
 
 namespace Nov4thYr_Project.Controllers
@@ -17,9 +18,12 @@ namespace Nov4thYr_Project.Controllers
         // GET: Patients
         public ActionResult Index(DisplayAppointments da)
         {
+            var currentUserID = User.Identity.GetUserId();
+            ViewBag.userid = currentUserID;
+
             string mainconn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection sqlconn = new SqlConnection(mainconn);
-            string s1 = "select * from [myDataBaseAuth].[dbo].[Appointment2]";
+            string s1 = "select * from [myDataBaseAuth].[dbo].[Appointment4]";
             SqlCommand sqlcomm = new SqlCommand(s1);
             sqlcomm.Connection = sqlconn;
             sqlconn.Open();
@@ -37,7 +41,7 @@ namespace Nov4thYr_Project.Controllers
                     details.Symptoms = sdr["Symptoms"].ToString();
                     details.Doctor = sdr["Doctor"].ToString();
                     details.Date = sdr["Date"].ToString();
-                    details.Time = sdr["Time"].ToString();
+                    details.UserId = sdr["UserId"].ToString();
                     objmodel.Add(details);
                 }
                 da.patientInfo = objmodel;
@@ -45,8 +49,9 @@ namespace Nov4thYr_Project.Controllers
             }
             return View("Index", da);
         }
-
         
+
+
     }
 
 

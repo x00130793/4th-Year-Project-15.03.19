@@ -14,7 +14,7 @@ namespace Nov4thYr_Project.Models
         public string Symptoms { get; set; }
         public string Doctor { get; set; }
         public string Date { get; set; }
-        public string Time { get; set; }
+        public string UserId { get; set; }
 
         public List<DisplayAppointments> patientInfo { get; set; }
 
