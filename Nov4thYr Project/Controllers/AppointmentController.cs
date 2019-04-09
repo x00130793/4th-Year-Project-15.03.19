@@ -16,7 +16,7 @@ namespace Nov4thYr_Project.Controllers
         [HttpGet]
         public ActionResult AppointmentForm()
         {
-            myDataBaseAuthEntities2 dbc = new myDataBaseAuthEntities2();
+            ProjectDBEntities1 dbc = new ProjectDBEntities1();
             DataClasses1DataContext eve = new DataClasses1DataContext();
             //IEnumerable<SelectListItem> Doctor = dbc.AspNetUserRoles.Where(x => x.RoleId == "e8f1347d-a369-4842-ac06-a4dee22150f1").Select(u => new SelectListItem
             //{
@@ -70,7 +70,7 @@ namespace Nov4thYr_Project.Controllers
         [HttpPost]
         public ActionResult AppointmentForm(Appointment4 appointmentModel)
         {
-            myDataBaseAuthEntities2 dbc = new myDataBaseAuthEntities2();
+            ProjectDBEntities1 dbc = new ProjectDBEntities1();
             DataClasses1DataContext eve = new DataClasses1DataContext();
             using (ProjectDBEntities appModel = new ProjectDBEntities())
             {

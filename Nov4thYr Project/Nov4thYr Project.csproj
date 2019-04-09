@@ -208,7 +208,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="AspNetUserRole.cs">
-      <DependentUpon>UserRoles.tt</DependentUpon>
+      <DependentUpon>UserRoles2.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AppointmentController.cs" />
@@ -398,6 +398,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserRoles.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UserRoles2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoles2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoles2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoles2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoles2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserRoles2.edmx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -506,6 +521,16 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\daypilot-all.min.js" />
+    <Content Include="UserRoles2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserRoles2.edmx</DependentUpon>
+      <LastGenOutput>UserRoles2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UserRoles2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserRoles2.edmx</DependentUpon>
+      <LastGenOutput>UserRoles2.cs</LastGenOutput>
+    </Content>
     <Content Include="WebForm1.aspx" />
     <None Include="Controllers\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
@@ -572,6 +597,9 @@
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy3.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy4.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy5.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy6.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy7.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy8.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -653,6 +681,13 @@
     </Content>
     <Content Include="Views\Members\Charge.cshtml" />
     <Content Include="Views\Doctors\DoctorsAppointments.cshtml" />
+    <EntityDeploy Include="UserRoles2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserRoles2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="UserRoles2.edmx.diagram">
+      <DependentUpon>UserRoles2.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
