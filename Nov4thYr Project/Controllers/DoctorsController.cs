@@ -18,6 +18,11 @@ namespace Nov4thYr_Project.Controllers
             return View();
         }
 
+        public ActionResult DoctorsAppointments()
+        {
+            return View();
+        }
+
 
     }
 }

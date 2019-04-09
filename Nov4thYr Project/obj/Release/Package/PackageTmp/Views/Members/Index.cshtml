@@ -7,13 +7,13 @@
 
 <h2>Page for registered users only</h2>
 
-<form action="/Payment/Charge" method="POST">
+<form action="/Members/Charge" method="POST">
     <article>
         <label>Amount: $5.00</label>
     </article>
     <script src="//checkout.stripe.com/v2/checkout.js"
             class="stripe-button"
-            data-key="@ViewBag.StripePublishKey"
+            data-key="pk_test_23F5QsiVh2SushbfKrDhIyVQ"
             data-locale="auto"
             data-description="Sample Charge"
             data-amount="500">

@@ -22,7 +22,7 @@ namespace Nov4thYr_Project.Controllers
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="myDataBaseAuth")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ProjectDB")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace Nov4thYr_Project.Controllers
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::Nov4thYr_Project.Properties.Settings.Default.myDataBaseAuthConnectionString, mappingSource)
+				base(global::Nov4thYr_Project.Properties.Settings.Default.ProjectDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

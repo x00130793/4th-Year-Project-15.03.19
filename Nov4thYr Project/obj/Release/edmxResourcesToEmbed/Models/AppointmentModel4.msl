@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="myDataBaseAuthModel5StoreContainer" CdmEntityContainer="myDataBaseAuthEntities8">
+    <EntitySetMapping Name="Appointment4">
+      <EntityTypeMapping TypeName="myDataBaseAuthModel5.Appointment4">
+        <MappingFragment StoreEntitySet="Appointment4">
+          <ScalarProperty Name="AptId" ColumnName="AptId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="PatientPhoneNum" ColumnName="PatientPhoneNum" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Symptoms" ColumnName="Symptoms" />
+          <ScalarProperty Name="Doctor" ColumnName="Doctor" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

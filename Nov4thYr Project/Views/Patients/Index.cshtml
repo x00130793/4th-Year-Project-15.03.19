@@ -1,5 +1,34 @@
 ﻿@model Nov4thYr_Project.Models.DisplayAppointments
 
+<style>
+    table {
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#t01 th {
+        background-color: mediumslateblue;
+        color: white;
+    }
+</style>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -12,7 +41,7 @@
     {
         if (Model.patientInfo.Count > 0)
         {
-            <table>
+            <table id="t01">
                 <tr>
                     <th>Patients Name </th>
                     <th>Gender </th>
@@ -20,9 +49,10 @@
                     <th>Symptoms </th>
                     <th>Doctor </th>
                     <th>Date </th>
-                    <th>Time </th>
+                    <th>Payment</th>
+
                 </tr>
-                @foreach (var item in Model.patientInfo)
+                @foreach (var item in Model.patientInfo.Where(n => n.UserId == ViewBag.userid))
                 {
                 <tr>
                     <td>@Html.DisplayFor(m => item.PatientName)</td>
@@ -31,7 +61,19 @@
                     <td>@Html.DisplayFor(m => item.Symptoms)</td>
                     <td>@Html.DisplayFor(m => item.Doctor)</td>
                     <td>@Html.DisplayFor(m => item.Date)</td>
-                    <td>@Html.DisplayFor(m => item.Time)</td>
+                    <td><form action="/Members/Charge" method="POST">
+                            <article>
+                                <label>Amount: €50.00</label>
+                            </article>
+                                <script src="//checkout.stripe.com/v2/checkout.js"
+                                    class="stripe-button"
+                                    data-key="pk_test_23F5QsiVh2SushbfKrDhIyVQ"
+                                    data-locale="auto"
+                                    data-description="Sample Charge"
+                                    data-amount="500">
+                                </script>
+                        </form>
+                    </td>
                 </tr>
                 }
             </table>

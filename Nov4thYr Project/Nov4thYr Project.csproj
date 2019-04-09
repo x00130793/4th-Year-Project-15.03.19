@@ -228,6 +228,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\IdentityHelper.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs">
       <DependentUpon>AppointmentModel.tt</DependentUpon>
@@ -237,6 +238,12 @@
     </Compile>
     <Compile Include="Models\Appointment2.cs">
       <DependentUpon>AppointmentModel2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment3.cs">
+      <DependentUpon>AppointmentModel3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment4.cs">
+      <DependentUpon>AppointmentModel5.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AppointmentModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -282,6 +289,69 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppointmentModel2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel5.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel5.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppointmentModel5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentModel5.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>AspNetUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DisplayAppointments.cs" />
     <Compile Include="Models\Event1.cs">
@@ -375,6 +445,46 @@
       <DependentUpon>AppointmentModel2.edmx</DependentUpon>
       <LastGenOutput>AppointmentModel2.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\AppointmentModel3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel3.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel4.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel4.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel4.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel5.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel5.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel5.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AppointmentModel5.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AppointmentModel5.edmx</DependentUpon>
+      <LastGenOutput>AppointmentModel5.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AspNetUsers.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AspNetUsers.edmx</DependentUpon>
+      <LastGenOutput>AspNetUsers.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AspNetUsers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AspNetUsers.edmx</DependentUpon>
+      <LastGenOutput>AspNetUsers.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Events1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Events1.edmx</DependentUpon>
@@ -395,6 +505,7 @@
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Scripts\daypilot-all.min.js" />
     <Content Include="WebForm1.aspx" />
     <None Include="Controllers\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
@@ -427,7 +538,40 @@
     <Content Include="Models\Events1.edmx.diagram">
       <DependentUpon>Events1.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\AppointmentModel3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppointmentModel3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppointmentModel3.edmx.diagram">
+      <DependentUpon>AppointmentModel3.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AppointmentModel4.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppointmentModel4.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppointmentModel4.edmx.diagram">
+      <DependentUpon>AppointmentModel4.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AspNetUsers.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AspNetUsers.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AspNetUsers.edmx.diagram">
+      <DependentUpon>AspNetUsers.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\AppointmentModel5.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AppointmentModel5.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AppointmentModel5.edmx.diagram">
+      <DependentUpon>AppointmentModel5.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy3.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy4.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy5.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -508,6 +652,7 @@
       <DependentUpon>UserRoles.edmx</DependentUpon>
     </Content>
     <Content Include="Views\Members\Charge.cshtml" />
+    <Content Include="Views\Doctors\DoctorsAppointments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -33,5 +33,17 @@ namespace Nov4thYr_Project.Properties {
                 return ((string)(this["myDataBaseAuthConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ead2ca2.database.windows.net;Initial Catalog=ProjectDB;Persist Securi" +
+            "ty Info=True;User ID=green422;Password=Green420;MultipleActiveResultSets=True;Ap" +
+            "plication Name=EntityFramework")]
+        public string ProjectDBConnectionString {
+            get {
+                return ((string)(this["ProjectDBConnectionString"]));
+            }
+        }
     }
 }
