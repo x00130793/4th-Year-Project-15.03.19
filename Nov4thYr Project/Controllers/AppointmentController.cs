@@ -17,6 +17,7 @@ namespace Nov4thYr_Project.Controllers
         public ActionResult AppointmentForm()
         {
             ProjectDBEntities1 dbc = new ProjectDBEntities1();
+            ProjectDBEntitiesSymptoms sym = new ProjectDBEntitiesSymptoms();
             DataClasses1DataContext eve = new DataClasses1DataContext();
             //IEnumerable<SelectListItem> Doctor = dbc.AspNetUserRoles.Where(x => x.RoleId == "e8f1347d-a369-4842-ac06-a4dee22150f1").Select(u => new SelectListItem
             //{
@@ -34,6 +35,14 @@ namespace Nov4thYr_Project.Controllers
             }).ToList();
 
             ViewBag.doctordrop = doctordrop;
+
+            ViewBag.symptomName = sym.Symptoms.Select(n => n.Price);
+
+            ViewBag.symptoms = sym.Symptoms.Select(s => new SelectListItem
+            {
+                Value = s.Symptom1,
+                Text = s.Symptom1,
+            }).ToList();
 
             ViewBag.startitme = eve.Event1s.Select(t => new SelectListItem
             {
@@ -71,6 +80,7 @@ namespace Nov4thYr_Project.Controllers
         public ActionResult AppointmentForm(Appointment4 appointmentModel)
         {
             ProjectDBEntities1 dbc = new ProjectDBEntities1();
+            ProjectDBEntitiesSymptoms sym = new ProjectDBEntitiesSymptoms();
             DataClasses1DataContext eve = new DataClasses1DataContext();
             using (ProjectDBEntities appModel = new ProjectDBEntities())
             {
@@ -82,6 +92,14 @@ namespace Nov4thYr_Project.Controllers
             {
                 Value = u.UserId,
                 Text = u.UserId
+            }).ToList();
+
+            ViewBag.symptomName = sym.Symptoms.Select(n => n.Price);
+
+            ViewBag.symptoms = sym.Symptoms.Select(s => new SelectListItem
+            {
+                Value = s.Price,
+                Text = s.Symptom1
             }).ToList();
 
             //ViewBag.startitme = dbc1.Event1.Select(z => z.eventstart.ToString()).ToList();

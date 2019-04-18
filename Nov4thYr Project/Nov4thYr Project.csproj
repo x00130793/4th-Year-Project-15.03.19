@@ -376,6 +376,24 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleNames.cs" />
     <Compile Include="Models\StripeChargeModel.cs" />
+    <Compile Include="Models\Symptom.cs">
+      <DependentUpon>Symptoms.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Symptoms.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Symptoms.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Symptoms.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Symptoms.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Symptoms.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Symptoms.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -510,6 +528,16 @@
       <DependentUpon>Events1.edmx</DependentUpon>
       <LastGenOutput>Events1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Symptoms.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Symptoms.edmx</DependentUpon>
+      <LastGenOutput>Symptoms.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Symptoms.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Symptoms.edmx</DependentUpon>
+      <LastGenOutput>Symptoms.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -590,6 +618,13 @@
     </EntityDeploy>
     <Content Include="Models\AppointmentModel5.edmx.diagram">
       <DependentUpon>AppointmentModel5.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Symptoms.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Symptoms.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Symptoms.edmx.diagram">
+      <DependentUpon>Symptoms.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy1.pubxml" />
