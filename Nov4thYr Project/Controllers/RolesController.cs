@@ -13,6 +13,7 @@ namespace Nov4thYr_Project.Controllers
     public class RolesController : Controller
     {
         private ApplicationDbContext context = new ApplicationDbContext();
+        AspUsers au = new AspUsers();
         // GET: Roles
         public ActionResult Index()
         {
@@ -84,6 +85,13 @@ namespace Nov4thYr_Project.Controllers
 
             new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
+
+            ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
+            {
+                Value = s.Email,
+                Text = s.Email
+            });
+
             return View();
         }
 
@@ -94,6 +102,12 @@ namespace Nov4thYr_Project.Controllers
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr =>
             new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
+
+            ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
+            {
+                Value = s.Email,
+                Text = s.Email
+            });
             return View();
         }
 
@@ -112,6 +126,12 @@ namespace Nov4thYr_Project.Controllers
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
+            ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
+            {
+                Value = s.Email,
+                Text = s.Email
+            });
+
             return View("ManageUsers");
         }
         [HttpPost]
@@ -128,6 +148,12 @@ namespace Nov4thYr_Project.Controllers
                 // prepopulat roles for the view dropdown
                 var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
                 ViewBag.Roles = list;
+
+                ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
+                {
+                    Value = s.Email,
+                    Text = s.Email
+                });
             }
 
             return View("ManageUsers");
@@ -152,6 +178,12 @@ namespace Nov4thYr_Project.Controllers
             // prepopulat roles for the view dropdown
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
+
+            ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
+            {
+                Value = s.Email,
+                Text = s.Email
+            });
 
             return View("ManageUsers");
         }

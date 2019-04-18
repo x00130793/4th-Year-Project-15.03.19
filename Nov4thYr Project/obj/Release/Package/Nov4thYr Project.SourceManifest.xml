@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure Backup2 09.04.19\Nov4thYr Project\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure Backup2 09.04.19\Nov4thYr Project\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure Backup2 09.04.19\Nov4thYr Project\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure LATEST\Nov4thYr Project\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure LATEST\Nov4thYr Project\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Adi\source\repos\Nov4thYr Project Development version Azure LATEST\Nov4thYr Project\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

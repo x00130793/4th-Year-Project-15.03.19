@@ -98,7 +98,7 @@ namespace Nov4thYr_Project.Controllers
 
             ViewBag.symptoms = sym.Symptoms.Select(s => new SelectListItem
             {
-                Value = s.Price,
+                Value = s.Symptom1,
                 Text = s.Symptom1
             }).ToList();
 
