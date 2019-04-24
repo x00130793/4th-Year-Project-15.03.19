@@ -14,7 +14,7 @@
     @Html.ValidationSummary(true)
 
     <p>
-        User Email : @Html.DropDownList("User Name", (IEnumerable<SelectListItem>)ViewBag.UserEmails, "Select Email")
+        User Email : @Html.DropDownList("UserName", (IEnumerable<SelectListItem>)ViewBag.displayEmails, "Select Email")
         Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...")
 
     </p>
@@ -27,7 +27,7 @@
 {
     @Html.AntiForgeryToken()
 <p>
-    User Email : @Html.DropDownList("User Name", (IEnumerable<SelectListItem>)ViewBag.UserEmails, "Select Email")
+    User Email : @Html.DropDownList("UserName", (IEnumerable<SelectListItem>)ViewBag.displayEmails, "Select Email")
     <input type="submit" value="Get Roles for this User" />
 </p>
 }
@@ -54,7 +54,8 @@
     @Html.ValidationSummary(true)
 
 <p>
-    User Email : @Html.DropDownList("User Name", (IEnumerable<SelectListItem>)ViewBag.UserEmails, "Select Email")
+    @*@Html.DropDownList("Doctor", (List<SelectListItem>)ViewBag.doctordrop, "Select doc")*@
+    User Email : @Html.DropDownList("UserName", (IEnumerable<SelectListItem>)ViewBag.displayEmails, "Select Email")
     Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...")
 
 </p>

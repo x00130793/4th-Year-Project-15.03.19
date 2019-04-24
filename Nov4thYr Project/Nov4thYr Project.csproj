@@ -336,7 +336,7 @@
       <DependentUpon>AppointmentModel5.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>AspNetUsers.tt</DependentUpon>
+      <DependentUpon>AspNetUsers2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUsers.Context.cs">
       <AutoGen>True</AutoGen>
@@ -352,6 +352,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AspNetUsers.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspNetUsers2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DisplayAppointments.cs" />
     <Compile Include="Models\Event1.cs">
@@ -518,6 +533,16 @@
       <DependentUpon>AspNetUsers.edmx</DependentUpon>
       <LastGenOutput>AspNetUsers.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\AspNetUsers2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AspNetUsers2.edmx</DependentUpon>
+      <LastGenOutput>AspNetUsers2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AspNetUsers2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AspNetUsers2.edmx</DependentUpon>
+      <LastGenOutput>AspNetUsers2.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Events1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Events1.edmx</DependentUpon>
@@ -626,10 +651,18 @@
     <Content Include="Models\Symptoms.edmx.diagram">
       <DependentUpon>Symptoms.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\AspNetUsers2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AspNetUsers2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AspNetUsers2.edmx.diagram">
+      <DependentUpon>AspNetUsers2.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy10.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy11.pubxml" />
+    <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy12.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy2.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy3.pubxml" />
     <None Include="Properties\PublishProfiles\4thYearProject - Web Deploy4.pubxml" />

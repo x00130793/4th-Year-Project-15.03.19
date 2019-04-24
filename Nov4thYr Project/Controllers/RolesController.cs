@@ -13,7 +13,7 @@ namespace Nov4thYr_Project.Controllers
     public class RolesController : Controller
     {
         private ApplicationDbContext context = new ApplicationDbContext();
-        AspUsers au = new AspUsers();
+        ProjectDBEntities2 au = new ProjectDBEntities2();
         // GET: Roles
         public ActionResult Index()
         {
@@ -86,11 +86,14 @@ namespace Nov4thYr_Project.Controllers
             new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
+            var testemails = au.AspNetUsers.OrderBy(n => n.Email).ToList().Select(nn => new SelectListItem { Value = nn.Email.ToString(), Text = nn.Email }).ToList();
+            ViewBag.displayEmails = testemails;
+
             ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
             {
                 Value = s.Email,
                 Text = s.Email
-            });
+            }).ToList();
 
             return View();
         }
@@ -103,11 +106,15 @@ namespace Nov4thYr_Project.Controllers
             new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
+            var testemails = au.AspNetUsers.OrderBy(n => n.Email).ToList().Select(nn => 
+            new SelectListItem { Value = nn.Email.ToString(), Text = nn.Email }).ToList();
+            ViewBag.displayEmails = testemails;
+
             ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
             {
                 Value = s.Email,
                 Text = s.Email
-            });
+            }).ToList();
             return View();
         }
 
@@ -126,11 +133,14 @@ namespace Nov4thYr_Project.Controllers
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
+            var testemails = au.AspNetUsers.OrderBy(n => n.Email).ToList().Select(nn => new SelectListItem { Value = nn.Email.ToString(), Text = nn.Email }).ToList();
+            ViewBag.displayEmails = testemails;
+
             ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
             {
                 Value = s.Email,
                 Text = s.Email
-            });
+            }).ToList();
 
             return View("ManageUsers");
         }
@@ -149,11 +159,15 @@ namespace Nov4thYr_Project.Controllers
                 var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
                 ViewBag.Roles = list;
 
+                var testemails = au.AspNetUsers.OrderBy(n => n.Email).ToList().Select(nn => new SelectListItem { Value = nn.Email.ToString(), Text = nn.Email }).ToList();
+                ViewBag.displayEmails = testemails;
+
                 ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
                 {
                     Value = s.Email,
                     Text = s.Email
-                });
+                }).ToList();
+
             }
 
             return View("ManageUsers");
@@ -179,11 +193,14 @@ namespace Nov4thYr_Project.Controllers
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
+            var testemails = au.AspNetUsers.OrderBy(n => n.Email).ToList().Select(nn => new SelectListItem { Value = nn.Email.ToString(), Text = nn.Email }).ToList();
+            ViewBag.displayEmails = testemails;
+
             ViewBag.UserEmails = au.AspNetUsers.Select(s => new SelectListItem
             {
                 Value = s.Email,
                 Text = s.Email
-            });
+            }).ToList();
 
             return View("ManageUsers");
         }
