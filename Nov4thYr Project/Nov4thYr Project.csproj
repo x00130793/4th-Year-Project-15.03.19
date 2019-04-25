@@ -759,6 +759,7 @@
     <Content Include="UserRoles2.edmx.diagram">
       <DependentUpon>UserRoles2.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\Patients\DoctorsAppointments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

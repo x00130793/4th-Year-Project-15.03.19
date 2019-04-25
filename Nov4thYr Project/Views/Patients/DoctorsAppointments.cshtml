@@ -1,0 +1,69 @@
+﻿@model Nov4thYr_Project.Models.DisplayAppointments
+
+<style>
+    table {
+        width: 120%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#t01 th {
+        background-color: mediumslateblue;
+        color: white;
+    }
+</style>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Patient Details for Doctor:</h2>
+<h4>@Html.ViewBag.userEmail</h4>
+
+
+@if (Model != null)
+{
+    if (Model.patientInfo.Count > 0)
+    {
+        <table id="t01">
+            <tr>
+                <th>Patients Name </th>
+                <th>Gender </th>
+                <th>Patients Phone Number </th>
+                <th>Email</th>
+                <th>Symptoms </th>
+                <th>Date </th>
+
+
+            </tr>
+            @foreach (var item in Model.patientInfo.Where(n => n.Doctor == ViewBag.userid))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.PatientName)</td>
+                    <td>@Html.DisplayFor(m => item.Gender)</td>
+                    <td>@Html.DisplayFor(m => item.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(m => item.Email)</td>
+                    <td>@Html.DisplayFor(m => item.Symptoms)</td>
+                    <td>@Html.DisplayFor(m => item.Date)</td>
+                    
+                </tr>
+            }
+        </table>
+    }
+}

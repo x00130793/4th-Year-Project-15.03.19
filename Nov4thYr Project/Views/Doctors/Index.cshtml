@@ -4,13 +4,12 @@
     ViewBag.Title = "Availability Calendar";
 }
 
-
+@*https://www.codeproject.com/Articles/404647/AJAX-Event-Calendar-Scheduler-for-ASP-NET-MVC-in*@ @*<----- Scheduler made with help of this tutorial*@
 
 <h2>Doctors Availability Page</h2>
 <p>Welcome to the doctors page</p>
 
 
-@*<script src="@Url.Content("~/Scripts/DayPilot/daypilot-all.min.js")" type="text/javascript"></script>*@
 <script src="@Url.Content("~/Scripts/daypilot-all.min.js")" type="text/javascript"></script>
 
 @Html.DayPilotCalendar("dpc", new DayPilotCalendarConfig
