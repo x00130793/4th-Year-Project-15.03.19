@@ -41,7 +41,7 @@ namespace Nov4thYr_Project.Controllers
                 Text = t.eventstart.ToString()
             }).ToList();
 
-            ViewBag.orderedTime = eve.Event1s.OrderBy(x => x.eventstart).Select(t => new SelectListItem
+            ViewBag.orderedTime = eve.Event1s.Where(x => x.eventstart > DateTime.Today).OrderBy(x => x.eventstart).Select(t => new SelectListItem
             {
                 Value = t.eventstart.ToString(),
                 Text = t.eventstart.ToString()
@@ -63,7 +63,7 @@ namespace Nov4thYr_Project.Controllers
             return View(appointmentModel);
 
         }
-
+        
         [HttpPost]
         public ActionResult AppointmentForm(Appointment4 appointmentModel)
         {
@@ -75,7 +75,7 @@ namespace Nov4thYr_Project.Controllers
                 appModel.Appointment4.Add(appointmentModel);
                 appModel.SaveChanges();
             }
-
+            
             ViewBag.doctordrop = dbc.AspNetUserRoles.Where(x => x.RoleId == "e8f1347d-a369-4842-ac06-a4dee22150f1").Select(u => new SelectListItem
             {
                 Value = u.UserId,
@@ -96,7 +96,7 @@ namespace Nov4thYr_Project.Controllers
                 Text = t.eventstart.ToString()
             }).ToList();
 
-            ViewBag.orderedTime = eve.Event1s.OrderBy(x => x.eventstart).Select(t => new SelectListItem
+            ViewBag.orderedTime = eve.Event1s.Where(x => x.eventstart > DateTime.Today).OrderBy(x => x.eventstart).Select(t => new SelectListItem
             {
                 Value = t.eventstart.ToString(),
                 Text = t.eventstart.ToString()

@@ -39,7 +39,6 @@ namespace Nov4thYr_Project.Controllers
             var user = context.Users.Where(u => u.Id == appuser.Id).FirstOrDefault();
             context.Users.Remove(user);
             context.SaveChanges();
-            //var user = context.Users.Where(u => u.Id == id.ToString()).FirstOrDefault();
             return RedirectToAction("UserList");
         }
         
@@ -57,13 +56,11 @@ namespace Nov4thYr_Project.Controllers
         {
             var context = new Models.ApplicationDbContext();
             var user = context.Users.Where(u => u.Id == appuser.Id).FirstOrDefault();
-            //context.Entry(appuser).State = EntityState.Modified;
             user.Email = appuser.Email;
             user.UserName = appuser.UserName;
             user.PhoneNumber = appuser.PhoneNumber;
             user.PasswordHash = user.PasswordHash;
             context.SaveChanges();
-            //var user = context.Users.Where(u => u.Id == id.ToString()).FirstOrDefault();
             return RedirectToAction("UserList");
         }
     }
