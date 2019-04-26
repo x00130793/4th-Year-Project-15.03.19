@@ -28,13 +28,8 @@ namespace Nov4thYr_Project.Controllers
 
         public ActionResult Charge()
         {
-            ViewBag.Message = "Learn how to process payments with Stripe";
             return View(new StripeChargeModel());
         }
-
-        
-
-
 
         //public ActionResult Charge(string stripeEmail, string stripeToken)
         //{

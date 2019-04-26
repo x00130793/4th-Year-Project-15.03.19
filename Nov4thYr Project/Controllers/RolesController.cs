@@ -80,7 +80,7 @@ namespace Nov4thYr_Project.Controllers
 
         public ActionResult ManageUserRoles()
         {
-            // prepopulat roles for the view dropdown
+            // prepopulate roles for the view dropdown
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr =>
 
             new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
@@ -129,7 +129,7 @@ namespace Nov4thYr_Project.Controllers
 
             //ViewBag.ResultMessage = "Role created successfully !";
 
-            // prepopulat roles for the view dropdown
+            // prepopulate roles for the view dropdown
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 
@@ -155,7 +155,7 @@ namespace Nov4thYr_Project.Controllers
 
                 ViewBag.RolesForThisUser = manager.GetRoles(user.Id);
 
-                // prepopulat roles for the view dropdown
+                // prepopulate roles for the view dropdown
                 var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
                 ViewBag.Roles = list;
 
@@ -189,7 +189,7 @@ namespace Nov4thYr_Project.Controllers
             {
                 ViewBag.ResultMessage = "This user doesn't belong to selected role.";
             }
-            // prepopulat roles for the view dropdown
+            // prepopulate roles for the view dropdown
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
 

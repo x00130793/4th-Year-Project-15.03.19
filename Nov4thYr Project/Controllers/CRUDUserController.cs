@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Nov4thYr_Project.Controllers
 {
+    //Controller with functions that allow for, displaying user list, editing a user and deleting user.
     public class CRUDUserController : Controller
     {
         // GET: CRUDUser
@@ -15,7 +16,6 @@ namespace Nov4thYr_Project.Controllers
             return View();
         }
 
-        
         [Authorize(Roles = "Administrator")]
         public ActionResult UserList()
         {

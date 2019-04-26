@@ -12,7 +12,8 @@ using Microsoft.AspNet.Identity;
 
 namespace Nov4thYr_Project.Controllers
 {
-    [Authorize(Roles = "Doctor,Administrator,Patient")]
+    //Functionality for displaying information to patients about apointments 
+    [Authorize(Roles = "Administrator,Doctor,Patient")]
     public class PatientsController : Controller
     {
         // GET: Patients
@@ -49,7 +50,8 @@ namespace Nov4thYr_Project.Controllers
             }
             return View("Index", da);
         }
-        [Authorize(Roles = "Doctor")]
+        //Functionality for displaying information about doctors appointments
+        [Authorize(Roles = "Administrator,Doctor")]
         public ActionResult DoctorsAppointments(DisplayAppointments da)
         {
             var currentUserID = User.Identity.GetUserId();

@@ -36,6 +36,7 @@ namespace Nov4thYr_Project.Controllers
             return new Dpc().CallBack(this);
         }
 
+        //Functionality of Doctors Calendar
         class Dpc : DayPilotCalendar
         {
             DataClasses1DataContext db = new DataClasses1DataContext();
