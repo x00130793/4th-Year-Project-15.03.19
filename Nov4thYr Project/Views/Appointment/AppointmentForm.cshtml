@@ -4,7 +4,7 @@
     ViewBag.Title = "AppointmentForm";
 }
 
-<h2>AppointmentForm</h2>
+<h2>Appointment Form</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,6 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>Appointment</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

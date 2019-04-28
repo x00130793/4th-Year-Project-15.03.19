@@ -29,6 +29,7 @@ namespace Nov4thYr_Project.Helpers
                 var roleresult = roleManager.Create(new IdentityRole(RoleNames.ROLE_PATIENT));
             }
 
+            //Seeding in user and assigning an admin role when creating the project
             string userName = "newadmin@admin.com";
             string password = "Admin1!";
 

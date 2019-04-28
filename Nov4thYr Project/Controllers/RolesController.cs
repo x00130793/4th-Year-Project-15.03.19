@@ -25,6 +25,7 @@ namespace Nov4thYr_Project.Controllers
             return View();
         }
 
+        //Creating new roles
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -44,6 +45,7 @@ namespace Nov4thYr_Project.Controllers
             }
         }
 
+        //Deleting existing roles
         public ActionResult Delete(string RoleName)
         {
             var thisRole = context.Roles.Where(r => r.Name.Equals(RoleName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
@@ -52,6 +54,7 @@ namespace Nov4thYr_Project.Controllers
             return RedirectToAction("Create");
         }
 
+        //Editing existing roles
         // GET: /Roles/Edit/5
         public ActionResult Edit(string roleName)
         {
@@ -117,7 +120,7 @@ namespace Nov4thYr_Project.Controllers
             }).ToList();
             return View();
         }
-
+        //Add role to user
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RoleAddToUser(string UserName, string RoleName, string name)
@@ -144,6 +147,7 @@ namespace Nov4thYr_Project.Controllers
 
             return View("ManageUsers");
         }
+        //Get roles for user
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult GetRoles(string UserName)
@@ -172,6 +176,7 @@ namespace Nov4thYr_Project.Controllers
 
             return View("ManageUsers");
         }
+        //Delete role from user
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteRoleForUser(string UserName, string RoleName)
